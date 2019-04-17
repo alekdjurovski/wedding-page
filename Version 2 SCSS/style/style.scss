@@ -1,0 +1,57 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(61, 138, 197);
+}
+
+.main {
+  /* height: 150px; */
+  /* height: 100vh; */
+  background: url("../img/bg1.jpg") no-repeat;
+  background-size: cover;
+  /* text-align: center; */
+}
+
+.red {
+  background-color: rgba(71, 61, 139, 0.294);
+  height: 100vh;
+}
+
+.green {
+  background-color: rgba(20, 230, 132, 0.322);
+  height: 100vh;
+}
+
+.yellow {
+  background-color: rgba(201, 173, 15, 0.267);
+  height: 100vh;
+}
+
+.card-container {
+  position: relative;
+  width: 18rem;
+  perspective: 200rem;
+  height: 90vh;
+  &:hover {
+    .card-front {
+      transform: rotateY(180deg);
+    }
+    .card-back {
+      transform: rotateY(0deg);
+    }
+  }
+  .card-back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
+  .card-border {
+    position: absolute;
+    transition: 0.9s;
+    backface-visibility: hidden;
+  }
+
+  .card-front{
+      transition: 0.9s;
+      backface-visibility: hidden;
+  }
+}
